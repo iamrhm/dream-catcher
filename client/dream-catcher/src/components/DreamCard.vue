@@ -1,7 +1,8 @@
 <template>
   <div class="dream-display-card">
     <div class = 'dream-display-header'>
-        <md-icon class="md-size-3x bookmark"> bookmark </md-icon>
+        <md-icon class="md-size-3x bookmark" 
+        style='color: #3b444b;'> bookmark </md-icon>
     </div>
     
     <div class="dream-display-content">
@@ -15,7 +16,7 @@
       <hr>
     </div>
 
-    <div class = 'dream-sentiments'>
+    <!-- <div class = 'dream-sentiments'>
       <div class = 'happy-sentiment'>
         😃
       </div>
@@ -25,7 +26,7 @@
       <div class = 'angry-sentiment'>
         😡
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -61,7 +62,7 @@ export default {
   }
   .bookmark{
     margin-top: -9px;
-    color: rgba(0,0,0,0.54);
+    color: #c5d1da;
     /* color: #f8f8ff30; onclick */
   }
   .dream-date{
@@ -95,7 +96,7 @@ export default {
     font-size: 1.5em;
     padding: 0 0.25em;
     background: white;
-        margin: 15px auto 10px;
+    margin: 15px auto 10px;
 
   }
   .dream-sentiments{
