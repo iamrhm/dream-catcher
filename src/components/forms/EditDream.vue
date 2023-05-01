@@ -9,18 +9,18 @@
           <md-datepicker id="md-date-icon"
           v-model="dreamDate">
             <label style='color: rgba(255,255,255,0.48);'>Select Date</label>
-          </md-datepicker> 
+          </md-datepicker>
         </div>
       <hr>
         <span class ='edit-dream-story' >
-          <md-field class= 'edit-story-input'>  
+          <md-field class= 'edit-story-input'>
             <label style='color: rgba(255,255,255,0.48);'>Your Dream</label>
             <div class='multiline-input'>
-            <md-textarea  
+            <md-textarea
                 v-model.trim="dreamStory"
-                style='color: rgba(255,255,255,0.48);  
+                style='color: rgba(255,255,255,0.48);
                 height: 100%;
-                width:100%;  
+                width:100%;
                 margin:auto;
                 -webkit-text-fill-color: rgba(255,255,255,0.48);' >
             </md-textarea>
@@ -96,9 +96,9 @@ export default {
     height: 10%;
     text-align: right
   }
-  
+
   .dream-date{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
@@ -172,14 +172,14 @@ export default {
     border-color: rgba(255,255,255,0.54);
   }
 
-  .md-field.md-theme-default>.md-icon:after {
+  .md-field.md-theme-default>.span:after {
       background-color: transparent;
   }
   .md-input{
      background-color: rgba(255,255,255,0.48);
      color:wheat;
   }
- 
+
   .multiline-input{
   margin: 4% auto 0%;
   }

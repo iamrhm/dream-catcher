@@ -5,25 +5,25 @@
       <div class='edit-profile-photo'>
         <input type="file" name="file" id="file" class="profile-pic" v-on:change="onChange($event)"/>
           <label for="file"
-            v-if ="imgSrc === null" 
+            v-if ="imgSrc === null"
             class='add-image-button'
             >
-              <md-icon
-                style='color: #f8f8ffb5;'> 
+              <span
+                style='color: #f8f8ffb5;'>
                 add_circle
-              </md-icon>
+              </span>
           </label>
           <label for="file"
             v-else
             class ='edit-image-button'
           >
-            <md-icon
-              style='color: #f8f8ffb5;'> 
+            <span
+              style='color: #f8f8ffb5;'>
               edit
-            </md-icon>
+            </span>
           </label>
-          <div 
-            v-bind:style="{backgroundImage : 'url(' +imgSrc+')' }" 
+          <div
+            v-bind:style="{backgroundImage : 'url(' +imgSrc+')' }"
             class='uploaded-photo'
           >
           </div>
@@ -33,8 +33,8 @@
         <span class = 'user-name'>
           <md-field >
             <label style = 'color: rgba(255,255,255,0.48);'>User Name</label>
-            <md-input style = 'color: rgba(255,255,255,0.48);    
-              -webkit-text-fill-color: rgba(255,255,255,0.48);' 
+            <md-input style = 'color: rgba(255,255,255,0.48);
+              -webkit-text-fill-color: rgba(255,255,255,0.48);'
               type = 'text'
               v-model="userName">
             </md-input>
@@ -44,9 +44,9 @@
         <span class = 'user-work-hobbies'>
           <md-field>
             <label style='color: rgba(255,255,255,0.48);'>Interests</label>
-            <md-input 
-              style='color: rgba(255,255,255,0.48);    
-              -webkit-text-fill-color: rgba(255,255,255,0.48);' 
+            <md-input
+              style='color: rgba(255,255,255,0.48);
+              -webkit-text-fill-color: rgba(255,255,255,0.48);'
                v-model.trim ="interests"
                :maxlength ="26"
                ></md-input>
@@ -57,24 +57,24 @@
     </div>
     <div class="user-bio">
       <span class='up-quote'>
-        <md-icon  style='color: #f8f8ffb5; font-size: 32px!important;'>format_quote</md-icon>
+        <span  style='color: #f8f8ffb5; font-size: 32px!important;'>format_quote</span>
         <hr class='top-line'/>
       </span>
-      
+
       <!-- word limit 320 -->
       <span class ='user-bio-story' >
-        <md-field class= 'user-bio-story-input'>  
+        <md-field class= 'user-bio-story-input'>
           <label style='color: rgba(255,255,255,0.48);'>Bio</label>
-          <md-textarea  
+          <md-textarea
               v-model ="bioStory"
               :maxlength ="320"
-              style='color: rgba(255,255,255,0.48);    
+              style='color: rgba(255,255,255,0.48);
               -webkit-text-fill-color: rgba(255,255,255,0.48);' >
           </md-textarea>
         </md-field>
       </span>
       <span class= 'down-quote'>
-        <md-icon  style='color: #f8f8ffb5; font-size: 32px!important;'>format_quote</md-icon>
+        <span  style='color: #f8f8ffb5; font-size: 32px!important;'>format_quote</span>
         <hr class='bottom-line'/>
       </span>
     </div>
@@ -187,7 +187,7 @@ export default {
     box-shadow: 0 0 0 2px #f8f8ffb5, 0 0 0 4px #232b2b, 0 0 4px 6px rgba(0, 0, 0, 0.37);
   }
   .add-image-button, .edit-image-button{
-    min-width: 8px; 
+    min-width: 8px;
     height: 24px; margin: auto;
     width: 24px;border-radius: 50%;
     position: absolute;
