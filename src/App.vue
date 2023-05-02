@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-full bg-gray-800">
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-      <div>
+    <div class="mx-auto max-w-5xl py-6 sm:px-6 lg:px-8">
+      <div class="flex flex-row">
         <SleepAnalysisCard />
         <SleepTrackCard />
       </div>

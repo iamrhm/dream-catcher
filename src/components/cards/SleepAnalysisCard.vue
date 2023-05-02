@@ -1,5 +1,5 @@
 <template>
-  <div class="dream-display-card">
+  <div class="w-2/3">
     <div class = 'dream-display-header'>
         <span class="md-size-3x bookmark"
         style='color: #3b444b;'> bookmark </span>
