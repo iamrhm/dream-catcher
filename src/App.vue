@@ -1,12 +1,12 @@
 <template>
-  <div class="min-h-full bg-slate-900 p-4 text-white">
-    <div class="mx-auto max-w-5xl py-6 sm:px-6 lg:px-8">
-      <div class="flex flex-row mb-6 items-center justify-end">
+  <div class="min-h-full bg-slate-900 text-white">
+    <div class="mx-auto max-w-3xl p-4 pt-8">
+      <div class="flex flex-row mb-8 items-center justify-end">
         <button class="rounded-md px-3 py-2 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700">
           Date Picker
         </button>
       </div>
-      <div class="flex flex-row h-48 mb-8">
+      <div class="flex flex-row mb-8">
         <SleepAnalysisCard />
         <SleepTrackCard />
       </div>

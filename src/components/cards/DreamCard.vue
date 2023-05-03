@@ -7,7 +7,7 @@
         </div>
       </div>
     </div>
-    <div class="dream-display-content p-8">
+    <div class="dream-display-content py-8 px-6">
       <p class='text-left truncate text-sm font-medium'>
         Lorem Ipsum is simply Lorem Ipsum has been the industry's standard dummy text
         ever since the 1500s, when an unknown printer took a galley of type and scrambled
@@ -18,17 +18,6 @@
         but also the leap into electronic typesetting, remaining essentially unchanged. It was
       </p>
     </div>
-    <!-- <div class = 'dream-sentiments'>
-      <div class = 'happy-sentiment'>
-        😃
-      </div>
-      <div class = 'sad-sentiment'>
-        😭
-      </div>
-      <div class = 'angry-sentiment'>
-        😡
-      </div>
-    </div> -->
   </div>
 </template>
 

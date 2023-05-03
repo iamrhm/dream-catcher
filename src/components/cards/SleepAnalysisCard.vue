@@ -1,24 +1,36 @@
 <template>
-  <div class="w-2/3 mr-4 bg-slate-800 rounded-md px-4 py-8 md:p-8 shadow-md h-full">
-    <div class="flex flex-row justify-around space-x-2 md:space-x-4 h-full">
-      <Bar />
-      <Bar />
-      <Bar />
-      <Bar />
-      <Bar />
-      <Bar />
-      <Bar />
+  <div class="w-2/3 mr-4 bg-slate-800 rounded-md px-6 py-6 shadow-md h-48">
+    <div class="flex flex-row justify-between h-full">
+      <VerticalBar
+        v-for="(item, index) in items"
+        :item="item"
+        :index="index"
+        :key="item.day"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Bar from '../bar/Bar.vue'
+import VerticalBar from '../graph/VerticalBar.vue'
 
 export default {
   name: 'SleepAnalysisCard',
   components: {
-    Bar
+    VerticalBar
+  },
+  data() {
+    return {
+      items: [
+        { day: 'Sun', hour: 4 },
+        { day: 'Mon', hour: 5 },
+        { day: 'Tue', hour: 5 },
+        { day: 'Wed', hour: 7 },
+        { day: 'Thu', hour: 6 },
+        { day: 'Fri', hour: 8 },
+        { day: 'Sat', hour: 3 },
+      ]
+    }
   }
 }
 </script>
