@@ -1,20 +1,23 @@
 <template>
-  <div class="w-1/3 bg-slate-800 rounded-md p-4 shadow-md flex items-center justify-center h-48">
-    <DonutCircle />
+  <div class="w-1/3">
+  <div class="w-full bg-slate-800 rounded-md p-4 py-6 shadow-md">
+    <div class="text-left pb-8 text-xs md:text-sm truncate"> 😴 &nbsp; Daily Sleep </div>
+    <CircleChart />
+  </div>
   </div>
 </template>
 
 <script>
-import DonutCircle from '../graph/DonutCircle.vue';
+import CircleChart from '../charts/DonutChart.vue';
 
 export default {
   name: 'SleepTrackCard',
   components: {
-    DonutCircle,
+    CircleChart,
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 </style>

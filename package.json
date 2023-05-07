@@ -9,7 +9,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
-    "vue": "3.2.45"
+    "apexcharts": "^3.40.0",
+    "vue": "3.2.45",
+    "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.6.1",

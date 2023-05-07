@@ -2,15 +2,15 @@
   <div class="login-card">
     <div class = 'login-header'>
     </div>
-    
+
     <form class="login-form">
       <div>
         <img class ='dream-logo' src="../../assets/dream_icon.svg" />
       </div>
       <md-field >
         <label style='color: rgba(255,255,255,0.48);'>User Name</label>
-        <md-input style='color: rgba(255,255,255,0.48);    
-         -webkit-text-fill-color: rgba(255,255,255,0.48);' 
+        <md-input style='color: rgba(255,255,255,0.48);
+         -webkit-text-fill-color: rgba(255,255,255,0.48);'
          type='text'
          v-model.trim="userName"
          >
@@ -18,8 +18,8 @@
       </md-field>
       <md-field :md-toggle-password="false">
         <label style='color: rgba(255,255,255,0.48);' >Password</label>
-        <md-input style='color: rgba(255,255,255,0.48);   
-         -webkit-text-fill-color: rgba(255,255,255,0.48);' 
+        <md-input style='color: rgba(255,255,255,0.48);
+         -webkit-text-fill-color: rgba(255,255,255,0.48);'
          type="password"
          v-model.trim="password"
          >
@@ -30,7 +30,7 @@
       v-on:click="onSubmit">
         Login
       </md-button>
-      
+
     </form>
 
   </div>
@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 .login-card {
     position: relative;

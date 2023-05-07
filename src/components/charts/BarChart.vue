@@ -4,7 +4,7 @@
   >
     <div class="w-full h-full bg-slate-900 rounded-lg relative">
       <div
-        class="w-full h-1/2 bg-slate-100 rounded-lg absolute bottom-0 left-0"
+        class="w-full bg-slate-100 rounded-lg absolute bottom-0 left-0 inner-bar"
         :style="{height: (item.hour/8) * 100 + '%'}"
       ></div>
     </div>
@@ -16,16 +16,21 @@
 
 <script>
 export default {
-  name: 'VerticalBar',
+  name: 'BarChart',
   props: ['item'],
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
   .bar {
-    width: 3%;
+    width: 6px;
     min-width: 4px;
+    height: 150px;
+  }
+  .inner-bar {
+    height: 0%;
+    transition: all 0.5s ease-in;
   }
   .text-day {
     font-size: 10px;

@@ -1,7 +1,8 @@
 <template>
-  <div class="w-2/3 mr-4 bg-slate-800 rounded-md px-6 py-6 shadow-md h-48">
+  <div class="w-2/3 mr-4 bg-slate-800 rounded-md px-4 py-6 md:px-6 shadow-md h-full">
+    <div class="text-left pb-8 text-xs md:text-sm"> ☾ &nbsp; Weekly Sleep </div>
     <div class="flex flex-row justify-between h-full">
-      <VerticalBar
+      <BarChart
         v-for="(item, index) in items"
         :item="item"
         :index="index"
@@ -12,12 +13,12 @@
 </template>
 
 <script>
-import VerticalBar from '../graph/VerticalBar.vue'
+import BarChart from '../charts/BarChart.vue'
 
 export default {
   name: 'SleepAnalysisCard',
   components: {
-    VerticalBar
+    BarChart
   },
   data() {
     return {
@@ -35,6 +36,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 </style>

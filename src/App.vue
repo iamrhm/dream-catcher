@@ -1,16 +1,17 @@
 <template>
   <div class="min-h-full bg-slate-900 text-white">
-    <div class="mx-auto max-w-3xl p-4 pt-8">
+    <div class="mx-auto max-w-xl p-4 pt-8">
       <div class="flex flex-row mb-8 items-center justify-end">
         <button class="rounded-md px-3 py-2 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700">
           Date Picker
         </button>
       </div>
-      <div class="flex flex-row mb-8">
+      <div class="flex flex-row mb-8 h-full">
         <SleepAnalysisCard />
         <SleepTrackCard />
       </div>
       <div class="relative">
+        <div class="text-left pt-8 pb-4 text-xs md:text-sm"> 💫 &nbsp; Your Dreams </div>
         <DreamList/>
       </div>
     </div>
@@ -33,11 +34,11 @@
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  width:100vw;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    width:100vw;
+  }
 </style>
