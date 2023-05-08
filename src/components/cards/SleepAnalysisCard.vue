@@ -1,6 +1,6 @@
 <template>
   <div class="w-2/3 mr-4 bg-slate-800 rounded-md px-4 py-6 md:px-6 shadow-md h-full">
-    <div class="text-left pb-8 text-xs md:text-sm"> ☾ &nbsp; Weekly Sleep </div>
+    <div class="text-left pb-8 text-xs md:text-sm font-semibold"> 🥱 &nbsp; Weekly Sleep </div>
     <div class="flex flex-row justify-between h-full">
       <BarChart
         v-for="(item, index) in items"
