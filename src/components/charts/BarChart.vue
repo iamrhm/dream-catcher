@@ -5,8 +5,7 @@
     <div class="w-full h-full bg-slate-900 rounded-lg relative">
       <div
         class="w-full bg-slate-100 rounded-lg absolute bottom-0 left-0 inner-bar"
-        :style="{height: (item.hour/8) * 100 + '%'}"
-      ></div>
+      />
     </div>
     <div class="mt-2 text-day">
       {{item.day}}
@@ -18,6 +17,11 @@
 export default {
   name: 'BarChart',
   props: ['item'],
+  data(){
+    return {
+      height: (this.item.hour/8) * 100 + '%',
+    }
+  }
 }
 </script>
 
@@ -29,10 +33,17 @@ export default {
     height: 150px;
   }
   .inner-bar {
-    height: 0%;
-    transition: all 0.5s ease-in;
+    animation: grow 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
   .text-day {
     font-size: 10px;
+  }
+  @keyframes grow {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: v-bind(height);
+    }
   }
 </style>
