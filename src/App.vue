@@ -6,7 +6,7 @@
           class="rounded-md px-3 py-2 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700"
           @click="toggleModal()"
         >
-          Date Picker
+          🗓️ &nbsp; 31-01-23
         </button>
       </div>
       <div class="flex flex-row mb-8 h-full">
@@ -18,7 +18,10 @@
         <DreamList/>
       </div>
     </div>
-    <ModalComponent v-if="showModal" />
+    <DatePicker
+      v-if="showModal"
+      @closeModal="toggleModal"
+    />
   </div>
 </template>
 
@@ -26,7 +29,7 @@
   import DreamList from './components/list/DreamList.vue'
   import SleepAnalysisCard from './components/cards/SleepAnalysisCard.vue'
   import SleepTrackCard from './components/cards/SleepTrackCard.vue'
-  import ModalComponent from './components/common/Modal.vue'
+  import DatePicker from './components/forms/DatePicker.vue'
 
   export default {
     name: 'app',
@@ -34,9 +37,10 @@
       DreamList,
       SleepAnalysisCard,
       SleepTrackCard,
-      ModalComponent,
+      DatePicker,
     },
     data() {
+      // const today = new Date();
       return {
         showModal: false,
       }
