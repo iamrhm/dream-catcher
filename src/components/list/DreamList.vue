@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="flex h-16 items-center justify-between mb-2 sticky top-0 bg-slate-900/80 backdrop-blur-md">
+    <div class="flex h-16 items-center justify-between mb-6 sticky top-0 bg-slate-900/80 backdrop-blur-md">
       <div class="flex items-center">
         <div class="flex items-baseline flex-wrap">
           <div
@@ -43,8 +43,7 @@ export default {
       ],
       filters: [
         { key: 1, value: 'All' },
-        { key: 2, value: `Today's` },
-        { key: 3, value: `Favorites` }
+        { key: 3, value: 'Favorites' }
       ],
       selectedFilterKey: 1,
     }

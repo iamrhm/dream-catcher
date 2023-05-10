@@ -21,8 +21,8 @@
               id="year"
               class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-inset ring-gray-300 outline-none"
               min="1900"
-              :max="currentYear"
-              v-model="inputValues.year"
+              :max="today.getFullYear()"
+              v-model="currentDate.year"
             >
           </div>
         </div>
@@ -37,7 +37,7 @@
               class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-inset ring-gray-300 outline-none"
               min="1"
               max="12"
-              v-model="inputValues.month"
+              v-model="currentDate.month"
             >
           </div>
         </div>
@@ -47,12 +47,12 @@
           <div class="mt-2">
             <input
               type="number"
-              name="date"
-              id="date"
+              name="day"
+              id="day"
               class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-inset ring-gray-300 outline-none"
               min="1"
               max="31"
-              v-model="inputValues.date"
+              v-model="currentDate.day"
             >
           </div>
         </div>
@@ -61,12 +61,20 @@
 
     <div class="px-6 pb-4 flex justify-end items-center">
       <p class="w-full"> {{ message }} </p>
-      <div
-        class="rounded-md px-3 py-2 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700 cursor-pointer"
+
+      <button
+        class="rounded-md px-3 py-2 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700 cursor-pointer mr-4 outline-0"
+        @click="resetToday"
+      >
+        Reset
+      </button>
+
+      <button
+        class="rounded-md px-3 py-2 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700 cursor-pointer outline-0"
         @click="validateDate"
       >
         Show
-      </div>
+      </button>
     </div>
 
   </Modal>
@@ -77,18 +85,15 @@
 
   export default {
     name: 'DatePicker',
+    props: ["date"],
     components: {
       Modal,
     },
-    data(){
-      const currentDate = new Date();
+    emits: ['closeModal', 'filterDreams'],
+    data() {
       return {
-        currentYear: currentDate.getFullYear(),
-        inputValues: {
-          year: currentDate.getFullYear(),
-          month: currentDate.getMonth() + 1,
-          date: currentDate.getDate(),
-        },
+        currentDate: { ...this.date },
+        today: new Date(),
         message: '',
       }
     },
@@ -97,15 +102,30 @@
         this.$emit('closeModal');
       },
       validateDate() {
-        const inputYear = this.inputValues.year;
-        const inputMonth = this.inputValues.month - 1;
-        const inputDate = this.inputValues.date;
-        const dateObj = new Date(inputYear, inputMonth, inputDate);
-        if (dateObj.getFullYear() !== inputYear || dateObj.getMonth() !== inputMonth || dateObj.getDate() !== inputDate) {
-          this.message = 'Invalid date!!  🤦🏻';
+        const dateObj = new Date(
+          this.currentDate.year,  this.currentDate.month - 1, this.currentDate.day
+        );
+        const isFutureDate = dateObj > this.today;
+
+        if (
+          (
+            dateObj.getFullYear() !== this.currentDate.year ||
+            dateObj.getMonth() !== this.currentDate.month - 1 ||
+            dateObj.getDate() !== this.currentDate.day
+          ) || isFutureDate
+        ) {
+          this.message = 'Invalid date!!  🙅🏻';
         } else {
           this.message = '';
+          this.$emit('filterDreams', this.currentDate);
         }
+      },
+      resetToday() {
+        this.$emit('filterDreams', {
+          year: this.today.getFullYear(),
+          month: this.today.getMonth() + 1,
+          day: this.today.getDate(),
+        });
       }
     }
   }
