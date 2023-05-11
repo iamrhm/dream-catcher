@@ -1,5 +1,13 @@
 <template>
   <div class="min-h-full bg-slate-900 text-white">
+    <div class="shadow-md p-4 flex justify-center items-center">
+      <div class="flex items-center">
+        <!-- <img class='w-8' src="./assets/dream_icon.svg" />
+        <div class="text-base font-semibold leading-6 ml-2">
+          Dream journal
+        </div> -->
+      </div>
+    </div>
     <LandingPage />
   </div>
 </template>

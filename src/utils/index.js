@@ -1,3 +1,9 @@
-export const monthMap = [
-  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-]
+export const sentiments = [
+  {value: 'positive', emoji: '😊'},
+  {value: 'negative', emoji: '😔'},
+  {value: 'neutral', emoji: '🤔'},
+  {value: 'joyful', emoji: '🥰' },
+  {value: 'sad', emoji: '😢'},
+  {value: 'angry', emoji: '😡'},
+  {value: 'fearful', emoji: '😰'}
+];

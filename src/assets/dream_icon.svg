@@ -1,8 +1,8 @@
 <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_di)">
-<path d="M16 2.5L4.5 23.5H27.5L16 2.5Z" stroke="white" stroke-opacity="0.48" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.0039 23.5C19.7627 23.5 22.8098 20.4529 22.8098 16.6941C22.8098 12.9353 19.7627 9.88823 16.0039 9.88823C12.2451 9.88823 9.19802 12.9353 9.19802 16.6941C9.19802 20.4529 12.2451 23.5 16.0039 23.5Z" stroke="white" stroke-opacity="0.48" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 2.5V23.5" stroke="white" stroke-opacity="0.48" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 2.5L4.5 23.5H27.5L16 2.5Z" stroke="white"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.0039 23.5C19.7627 23.5 22.8098 20.4529 22.8098 16.6941C22.8098 12.9353 19.7627 9.88823 16.0039 9.88823C12.2451 9.88823 9.19802 12.9353 9.19802 16.6941C9.19802 20.4529 12.2451 23.5 16.0039 23.5Z" stroke="white"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 2.5V23.5" stroke="white"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <filter id="filter0_di" x="0" y="-1" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

@@ -15,6 +15,12 @@
           </div>
         </div>
       </div>
+      <button
+        class="rounded-md px-3 py-2 bg-slate-700 shadow-md border-solid border border-sky-500 flex justify-center items-center text-sm font-semibold"
+        @click="toggleModal()"
+      >
+        Add Dreams &nbsp; 💭
+      </button>
     </div>
     <div class="overflow-y-scroll">
       <DreamCard
@@ -24,16 +30,22 @@
         :key="dream.id"
       />
     </div>
+    <AddDream
+      v-if="showModal"
+      @closeModal="toggleModal"
+    />
   </div>
 </template>
 
 <script>
 import DreamCard from '../../../components/cards/DreamCard.vue';
+import AddDream from '../../../components/forms/AddDream.vue';
 
 export default {
   name: 'DreamList',
   components: {
     DreamCard,
+    AddDream,
   },
   data() {
     return {
@@ -46,9 +58,13 @@ export default {
         { key: 2, value: 'Favorites' }
       ],
       selectedFilterKey: 1,
+      showModal: false,
     }
   },
   methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
     updateFilter(filter) {
       this.selectedFilterKey = filter.key;
     }
