@@ -7,8 +7,8 @@
         class="w-full bg-slate-100 rounded-lg absolute bottom-0 left-0 inner-bar"
       />
     </div>
-    <div class="mt-2 text-day">
-      {{item.day}}
+    <div class="mt-2 text-sm">
+      {{item.emoji}}
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   props: ['item'],
   data(){
     return {
-      height: (this.item.hour/8) * 100 + '%',
+      height: (this.item.percentage) * 100 + '%',
     }
   }
 }
@@ -34,9 +34,6 @@ export default {
   }
   .inner-bar {
     animation: grow 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  }
-  .text-day {
-    font-size: 10px;
   }
   @keyframes grow {
     0% {

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "apexcharts": "^3.40.0",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
     "vue": "3.2.45",
     "vue3-apexcharts": "^1.4.1"
   },

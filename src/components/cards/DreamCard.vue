@@ -26,7 +26,3 @@ export default {
   name: 'DreamCard',
 }
 </script>
-
-
-<style scoped>
-</style>

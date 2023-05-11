@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import DreamCard from '../cards/DreamCard.vue';
+import DreamCard from '../../../components/cards/DreamCard.vue';
 
 export default {
   name: 'DreamList',
@@ -43,7 +43,7 @@ export default {
       ],
       filters: [
         { key: 1, value: 'All' },
-        { key: 3, value: 'Favorites' }
+        { key: 2, value: 'Favorites' }
       ],
       selectedFilterKey: 1,
     }
@@ -55,7 +55,3 @@ export default {
   },
 }
 </script>
-
-
-<style scoped>
-</style>
