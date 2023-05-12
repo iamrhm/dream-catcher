@@ -1,16 +1,16 @@
 <template>
   <div
-    class="absolute w-48 rounded-lg z-10 right-0 border-solid border border-slate-500 popup-open bg-slate-900/80 backdrop-blur-md"
+    class="absolute w-48 rounded-lg z-10 right-0 border-solid border border-slate-500 popup-open bg-slate-800/70 backdrop-blur-md"
   >
-    <div class="flex flex-col px-4 py-4">
+    <div class="flex flex-col px-4 py-2">
       <div
         class="w-full text-sm"
-        v-for="(sentiment, index) in sentiments"
+        v-for="(sentiment, index) in categories"
         :key="sentiment.value"
         :index="index"
       >
         <div
-          class="mt-2 flex items-center cursor-pointer"
+          class="py-2 flex items-center cursor-pointer"
           @click="handleClick(index)"
         >
           <div
@@ -29,9 +29,9 @@
 
 <script>
   export default {
-    name: 'FilterPicker',
-    props: ['sentiments'],
-    emits: ['closeFilter', 'selectSentiment'],
+    name: 'CategoryFilter',
+    props: ['categories'],
+    emits: ['closeCategory', 'selectCategory'],
     data() {
       return {
         message: '',
@@ -39,10 +39,10 @@
     },
     methods: {
       handleClose() {
-        this.$emit('closeModal');
+        this.$emit('closeCategory');
       },
       handleClick(idx) {
-        this.$emit('selectSentiment',idx);
+        this.$emit('selectCategory',idx);
       }
     }
   }
@@ -55,11 +55,11 @@
   @keyframes open {
     0% {
       opacity: 0;
-      top: 80px;
+      top: 60px;
     }
     100% {
       opacity: 1;
-      top: 74px;
+      top: 54px;
     }
   }
 </style>

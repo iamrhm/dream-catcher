@@ -45,7 +45,7 @@ export default {
                 show: true,
                 label: '',
                 formatter: function () {
-                  return '6 hr'
+                  return '60%'
                 }
               }
             }

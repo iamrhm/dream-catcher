@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row mb-8 h-full">
+  <div class="mx-auto max-w-xl flex flex-row mb-8 h-full">
     <DreamAnalysisCard
       :dreamEmotion="dreamEmotion"
     />
