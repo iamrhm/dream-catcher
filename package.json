@@ -9,10 +9,12 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.21.0",
     "apexcharts": "^3.40.0",
     "axios": "^1.4.0",
     "dotenv": "^16.0.3",
     "vue": "3.2.45",
+    "vue-router": "^4.0.13",
     "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {

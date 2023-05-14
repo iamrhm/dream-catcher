@@ -2,7 +2,7 @@
   <Modal>
     <div class="shadow px-6 py-4 flex justify-between items-center">
       <div class="flex items-center">
-        <img class='w-8' src="../../assets/dream_icon.svg" />
+        <img class='w-8' src="../../assets/dreamIcon.svg" />
         <h3 class="text-base font-semibold leading-6 ml-2" id="modal-title">New Dream</h3>
       </div>
       <div

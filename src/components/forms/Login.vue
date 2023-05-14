@@ -5,7 +5,7 @@
 
     <form class="login-form">
       <div>
-        <img class ='dream-logo' src="../../assets/dream_icon.svg" />
+        <img class ='dream-logo' src="../../assets/dreamIcon.svg" />
       </div>
       <md-field >
         <label style='color: rgba(255,255,255,0.48);'>User Name</label>

@@ -12,7 +12,7 @@
 <script>
   import DreamAnalysisCard from '../../../components/cards/DreamAnalysisCard.vue'
   import DreamTrackCard from '../../../components/cards/DreamTrackCard.vue'
-  import { fetchDreamEmotion } from '../../../services/dreams';
+  import { fetchDreamEmotion } from '../../../config/dreams';
 
   export default {
     name: 'AnalysisFold',
