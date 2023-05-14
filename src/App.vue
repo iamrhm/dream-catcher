@@ -7,7 +7,7 @@
       <div class="flex items-center">
         <img class='w-8' src="./assets/dreamIcon.svg" />
         <div class="text-lg font-bold leading-6 ml-2">
-          Dream journal
+          Dream journal 
         </div>
       </div>
     </div>
