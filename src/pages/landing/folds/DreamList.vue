@@ -21,7 +21,7 @@
             class="rounded-md px-3 py-2 bg-slate-700 shadow-md border-solid border border-sky-500 flex justify-center items-center text-sm font-semibold"
             @click="toggleDreamModal()"
           >
-            Add Dreams &nbsp; 💭
+            <span class="hidden sm:block">Add Dreams &nbsp;</span> 💭
           </button>
           <button
             class="rounded-md w-9 px-2 py-2.5 text-sm shadow-md border border-slate-500 hover:border-slate-400 bg-slate-700 ml-4"
