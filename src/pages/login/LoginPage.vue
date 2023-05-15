@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  // import { signInWithGoogle } from '../../service/auth';
+  import { signInWithGoogle } from '../../service/auth';
 
   export default {
     name: 'LoginPage',
@@ -41,7 +41,7 @@
     },
     methods: {
       handleLogin() {
-        // signInWithGoogle();
+        signInWithGoogle();
       }
     }
   }
